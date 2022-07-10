@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971_Performance_Assessment.TermDetailPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Start">
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <Label Text="School Planner" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+                </Frame>
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <Label Text="Term Details" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+                </Frame>
+            </StackLayout>
+            <Grid BackgroundColor="Black" Margin="15,0,15,0" VerticalOptions="Fill">
+                <BoxView BackgroundColor="White" Margin="2"></BoxView>
+                <StackLayout Padding="10,5,10,5">
+                    <Label Text="Term Title" FontSize="Micro" FontAttributes="Bold"></Label>
+                    <Entry x:Name="TermTitle"></Entry>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout  HorizontalOptions="FillAndExpand">
+                            <Label Text="Term Start" FontSize="Micro" FontAttributes="Bold"></Label>
+                            <DatePicker x:Name="TermStart"></DatePicker>
+                        </StackLayout>
+                        <StackLayout  HorizontalOptions="FillAndExpand">
+                            <Label Text="Term End" FontSize="Micro" FontAttributes="Bold"></Label>
+                            <DatePicker x:Name="TermEnd"></DatePicker>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <StackLayout VerticalOptions="End" Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button x:Name="SaveButton" Text="Save" Clicked="SaveButton_Clicked"></Button>
+                    <Button x:Name="DeleteButton" Text="Delete" Clicked="DeleteButton_Clicked"></Button>
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button x:Name="ManageTermCourses" Text="Manage Term Courses" Clicked="ManageTermCourses_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971_Performance_Assessment.CourseDetailPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Start">
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <Label Text="School Planner" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+                </Frame>
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <Label Text="Course Details" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+                </Frame>
+            </StackLayout>
+            <ScrollView>
+                <Grid BackgroundColor="Black" Margin="15,0,15,0" VerticalOptions="Fill">
+                    <BoxView BackgroundColor="White" Margin="2"></BoxView>
+                    <StackLayout Padding="10,5,10,5">
+                        <Label Text="Course Title" FontSize="Micro" FontAttributes="Bold"></Label>
+                        <Entry x:Name="CourseTitle"></Entry>
+                        <Label Text="Course Term" FontSize="Micro" FontAttributes="Bold"></Label>
+                        <Picker x:Name="CourseTerm"></Picker>
+                        <Label Text="Course Status" FontSize="Micro" FontAttributes="Bold"></Label>
+                        <Picker x:Name="CourseStatus"></Picker>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout  HorizontalOptions="FillAndExpand">
+                                <Label Text="Course Start" FontSize="Micro" FontAttributes="Bold"></Label>
+                                <DatePicker x:Name="CourseStart"></DatePicker>
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox x:Name="CourseStartNotification"></CheckBox>
+                                    <Label Text="Send Notifications" FontSize="Micro" Padding="0,7,0,0"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout  HorizontalOptions="FillAndExpand">
+                                <Label Text="Course End" FontSize="Micro" FontAttributes="Bold"></Label>
+                                <DatePicker x:Name="CourseEnd"></DatePicker>
+                                <StackLayout Orientation="Horizontal">
+                                    <CheckBox x:Name="CourseEndNotification"></CheckBox>
+                                    <Label Text="Send Notifications" FontSize="Micro" Padding="0,7,0,0"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                        <Label Text="Course Instructor" FontSize="Micro" FontAttributes="Bold"></Label>
+                        <Picker x:Name="CourseInstructor" SelectedIndexChanged="CourseInstructor_SelectedIndexChanged"></Picker>
+                        <Label Text="Course Instructor Phone" FontSize="Micro" FontAttributes="Bold"></Label>
+                        <Entry x:Name="CourseInstructorPhone" IsReadOnly="True"></Entry>
+                        <Label Text="Course Instructor Email" FontSize="Micro" FontAttributes="Bold"></Label>
+                        <Entry x:Name="CourseInstructorEmail" IsReadOnly="True"></Entry>
+                        <Label Text="Course Notes" FontSize="Micro" FontAttributes="Bold"></Label>
+                        <Entry x:Name="CourseNotes"></Entry>
+                        <Button Text="Share Notes" Clicked="ShareLink_Clicked" FontSize="Small" FontAttributes="Bold" HorizontalOptions="End"></Button>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <StackLayout VerticalOptions="End" Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button x:Name="SaveButton" Text="Save" Clicked="SaveButton_Clicked"></Button>
+                    <Button x:Name="DeleteButton" Text="Delete" Clicked="DeleteButton_Clicked"></Button>
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button x:Name="ManageCourseAssessments" Text="Manage Course Assessments" Clicked="ManageCourseAssessments_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971_Performance_Assessment.InstructorDetailPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Start">
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <Label Text="School Planner" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+                </Frame>
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <Label Text="Instructor Details" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+                </Frame>
+            </StackLayout>
+            <Grid BackgroundColor="Black" Margin="15,0,15,0" VerticalOptions="Fill">
+                <BoxView BackgroundColor="White" Margin="2"></BoxView>
+                <StackLayout Padding="10,5,10,5">
+                    <Label Text="Instructor Name" FontSize="Micro" FontAttributes="Bold"></Label>
+                    <Entry x:Name="InstructorName"></Entry>
+                    <Label Text="Instructor Phone" FontSize="Micro" FontAttributes="Bold"></Label>
+                    <Entry x:Name="InstructorPhone" Keyboard="Telephone"></Entry>
+                    <Label Text="Instructor Email" FontSize="Micro" FontAttributes="Bold"></Label>
+                    <Entry x:Name="InstructorEmail" Keyboard="Email"></Entry>
+                </StackLayout>
+            </Grid>
+            <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="SaveButton" Text="Save" Clicked="SaveButton_Clicked"></Button>
+                <Button x:Name="DeleteButton" Text="Delete" Clicked="DeleteButton_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

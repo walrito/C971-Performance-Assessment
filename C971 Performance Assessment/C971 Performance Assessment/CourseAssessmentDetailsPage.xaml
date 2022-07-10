@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971_Performance_Assessment.CourseAssessmentDetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Start">
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <Label Text="School Planner" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+                </Frame>
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <Label Text="Course Assessment Details" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+                </Frame>
+            </StackLayout>
+            <Grid BackgroundColor="Black" Margin="15,0,15,0" VerticalOptions="Fill">
+                <BoxView BackgroundColor="White" Margin="2"></BoxView>
+                <StackLayout Padding="10,5,10,5">
+                    <Label Text="Assessment Title" FontSize="Micro" FontAttributes="Bold"></Label>
+                    <Entry x:Name="AssessmentTitle"></Entry>
+                    <Label Text="Assessment Type" FontSize="Micro" FontAttributes="Bold"></Label>
+                    <Picker x:Name="AssessmentType"></Picker>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout  HorizontalOptions="FillAndExpand">
+                            <Label Text="Assessment Start" FontSize="Micro" FontAttributes="Bold"></Label>
+                            <DatePicker x:Name="AssessmentStart"></DatePicker>
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox x:Name="AssessmentStartNotification"></CheckBox>
+                                <Label Text="Send Notifications" FontSize="Micro" Padding="0,7,0,0"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout  HorizontalOptions="FillAndExpand">
+                            <Label Text="Assessment End" FontSize="Micro" FontAttributes="Bold"></Label>
+                            <DatePicker x:Name="AssessmentEnd"></DatePicker>
+                            <StackLayout Orientation="Horizontal">
+                                <CheckBox x:Name="AssessmentEndNotification"></CheckBox>
+                                <Label Text="Send Notifications" FontSize="Micro" Padding="0,7,0,0"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+            <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="SaveButton" Text="Save" Clicked="SaveButton_Clicked"></Button>
+                <Button x:Name="DeleteButton" Text="Delete" Clicked="DeleteButton_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

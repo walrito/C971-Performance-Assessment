@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971_Performance_Assessment.TermPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Start">
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <Label Text="School Planner" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+                </Frame>
+                <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+                    <Label Text="Manage Terms" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+                </Frame>
+            </StackLayout>
+            <StackLayout x:Name="TermList" VerticalOptions="FillAndExpand">
+
+            </StackLayout>
+            <StackLayout VerticalOptions="End" Orientation="Horizontal" HorizontalOptions="Center">
+                <Button Text="Add Term" Clicked="AddTerm_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

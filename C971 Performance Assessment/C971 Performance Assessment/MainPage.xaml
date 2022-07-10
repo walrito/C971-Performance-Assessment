@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="C971_Performance_Assessment.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="0">
+            <Label Text="School Planner" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+        </Frame>
+        <Button Text="Manage Terms" Clicked="ManageTerms_Clicked" />
+        <Button Text="Manage Courses" Clicked="ManageCourses_Clicked" />
+        <Button Text="Manage Instructors" Clicked="ManageInstructors_Clicked" />
+    </StackLayout>
+
+</ContentPage>
